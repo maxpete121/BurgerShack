@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/BurgerApi:latest
+    env_file:
+      - BurgerApi-env
+    ports:
+      - "3000:3000"
