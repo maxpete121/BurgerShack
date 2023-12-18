@@ -46,7 +46,7 @@ class BurgerService{
     editBurg(burgId, payload){
         const burgP = fakeDB.Burgers.findIndex(burg => burg.id == burgId)
         const changeBurg = payload
-        fakeDB[burgP] = changeBurg
+        fakeDB.Burgers[burgP] = changeBurg
         return`Burger Modded`
     }
 }
