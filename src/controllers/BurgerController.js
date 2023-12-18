@@ -33,4 +33,13 @@ export class BurgerController extends BaseController{
             next(error)
         }
         }
+
+        deleteBurg(request, response, next){
+            try {
+                const burgId = request.params.burgId
+                const message = burgerService.deleteBurg(burgId)
+            } catch (error) {
+                next(error)
+            }
+        }
     }

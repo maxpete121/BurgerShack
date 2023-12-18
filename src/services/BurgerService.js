@@ -35,6 +35,13 @@ class BurgerService{
     newBurger.id = fakeDB.Burgers[fakeDB.Burgers.length -1].id + 1 
     fakeDB.Burgers.push(newBurger)
     }
+
+    deleteBurg(burgId){
+        const burgR = fakeDB.Burgers.findIndex(burg => burg.id == burgId)
+        if(!fakeDB.Burgers[burgR]) throw new Error(`No Burger found at id ${burgId}`)
+        fakeDB.Burgers.splice(burgR, 1)
+    return`Burger Eaten`
+    }
 }
 
 
