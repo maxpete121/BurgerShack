@@ -5,6 +5,7 @@ const fakeDB = {
         new Burger({
             id: 1,
             name: 'The Menace',
+            price: 7.99,
             sauce: 'Mayo',
             temp: 'Medium',
             cheese: 'Swiss',
@@ -13,6 +14,7 @@ const fakeDB = {
         new Burger({
             id: 2,
             name: 'Big Paul',
+            price: 8.99,
             sauce: 'Mustard',
             temp: 'Rare',
             cheese: 'Cheddar',
