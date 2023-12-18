@@ -42,6 +42,12 @@ class BurgerService{
         fakeDB.Burgers.splice(burgR, 1)
     return`Burger Eaten`
     }
+
+    editBurg(burgId, payload){
+        const burgP = fakeDB.Burgers.findIndex(burg => burg.id == burgId)
+        fakeDB[burgP] = payload
+        return`Burger Modded`
+    }
 }
 
 
