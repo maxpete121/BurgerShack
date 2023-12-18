@@ -11,7 +11,7 @@ const fakeDB = {
             bun: 'Wheat'
         }),
         new Burger({
-            id: 1,
+            id: 2,
             name: 'Big Paul',
             sauce: 'Mustard',
             temp: 'Rare',
@@ -26,6 +26,12 @@ class BurgerService{
     getBurger(){
         const burgers = fakeDB.Burgers
         return burgers
+    }
+
+    makeBurg(payload){
+       const newBurger = payload
+    newBurger.id = fakeDB.Burgers[fakeDB.Burgers.length -1].id + 1 
+    fakeDB.Burgers.push(newBurger)
     }
 }
 
